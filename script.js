@@ -72,6 +72,58 @@ const getValueStar = function () {
   }
 };
 
+const getValueDivide = function () {
+  if (document.querySelector(".divide").textContent === "/") {
+    document.querySelector(".display").textContent += "/";
+  }
+};
+
+const getValueZero = function () {
+  if (document.querySelector(".zero").textContent === "0") {
+    document.querySelector(".display").textContent += "0";
+  }
+};
+
+const getValueZeros = function () {
+  if (document.querySelector(".Zeros").textContent === "00") {
+    document.querySelector(".display").textContent += "00";
+  }
+};
+
+const getValueEquals = function () {
+  if (document.querySelector(".equals").textContent === "=") {
+    document.querySelector(".display").textContent = eval(
+      document.querySelector(".display").textContent
+    );
+  }
+};
+
+const getValueClear = function () {
+  if (document.querySelector(".clear").textContent === "AC") {
+    document.querySelector(".display").textContent = "";
+  }
+};
+
+const getValueDelete = function () {
+  if (document.querySelector(".delete").textContent === "DEL") {
+    document.querySelector(".display").textContent = document
+      .querySelector(".display")
+      .textContent.toString()
+      .slice(0, -1);
+  }
+};
+const getValuePoint = function () {
+  if (document.querySelector(".point").textContent === ".") {
+    document.querySelector(".display").textContent += ".";
+  }
+};
+
+const getValuePercent = function () {
+  if (document.querySelector(".percent").textContent === "%") {
+    document.querySelector(".display").textContent += "%";
+  }
+};
+
 document.querySelector(".one").addEventListener("click", getValueOne);
 document.querySelector(".two").addEventListener("click", getValueTwo);
 document.querySelector(".three").addEventListener("click", getValueThree);
@@ -84,3 +136,11 @@ document.querySelector(".nine").addEventListener("click", getValueNine);
 document.querySelector(".plus").addEventListener("click", getValuePlus);
 document.querySelector(".minus").addEventListener("click", getValueMinus);
 document.querySelector(".star").addEventListener("click", getValueStar);
+document.querySelector(".divide").addEventListener("click", getValueDivide);
+document.querySelector(".zeros").addEventListener("click", getValueZeros);
+document.querySelector(".zero").addEventListener("click", getValueZero);
+document.querySelector(".equals").addEventListener("click", getValueEquals);
+document.querySelector(".clear").addEventListener("click", getValueClear);
+document.querySelector(".delete").addEventListener("click", getValueDelete);
+document.querySelector(".percent").addEventListener("click", getValuePercent);
+document.querySelector(".point").addEventListener("click", getValuePoint);
