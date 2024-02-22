@@ -105,7 +105,7 @@ const getValueClear = function () {
 };
 
 const getValueDelete = function () {
-  if (document.querySelector(".delete").textContent === "DEL") {
+  if (document.querySelector(".delete").textContent === "DE") {
     document.querySelector(".display").textContent = document
       .querySelector(".display")
       .textContent.toString()
